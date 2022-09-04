@@ -1,108 +1,159 @@
-# a = "hello"
-# b = a.capitalize()  #capitalize = 0번째 인덱스의 문자를 대문자로 변경시킨다.
+#71번
+# my_variable = ()
+# print(type(my_variable))
+
+#72번
+# movie_rank = ('닥터 스트레인지','스플릿','럭키')
+
+#73번
+# a = (1,)
+
+#74번
+# t = (1, 2, 3)
+# t[0] = 'a'
+
+#75번
+# t = 1,2,3,4
+# print(type(t))
+
+#76번
+# t = ('a', 'b', 'c')
+# t = ('A','b','c')
+# print(t)
+
+#77번
+# interest = ('삼성전자', 'LG전자', 'SK Hynix')
+# data = list(interest)
+# print(data)
+
+#78번
+# interest = ['삼성전자', 'LG전자', 'SK Hynix']
+# data = tuple(interest)
+# print(data)
+
+#79번
+# temp = ('apple', 'banana', 'cake')
+# a, b, c = temp
+# print(a, b, c)
+
+#80번
+# data = tuple(range(2,100,2))
+# print(data)
+# # [시작 값 : 끝 인덱스 -1 : 스텝]
+
+# a, b, *c = (0, 1, 2, 3, 4, 5)
+# print(a)
 # print(b)
-# file_name = "보고서.xlsx"
-# print(file_name.endswith("xlsx"))
-# file_name = "2020_보고서.xlsx"
-# print(file_name.startswith("2020"))
-# a = "hello world"
-# print(a.split('_'))
+# print(c)
+# >> a
+# 0
+# >> b
+# 1
+# >> c
+# [2, 3, 4, 5]
 
 
-# l = [] # l은 비어있는 리스트
-# a = [1,2,3] # a는 원소 1, 2, 3이 들어있는 리스트
-# b = ['A','B','C'] # b는 'A','B','C'가 들어있는 리스트
-# c = [1,2,'A','B'] # C는 1, 2, 'A', 'B'가 들어있는 리스트
-# d = [[1,2,3], [4,5,6]] #d는 [1,2,3]과 [4,5,6]이 들어간 리스트
-# print(a[0])
-# print(b[0])
-# print(d[0])
-# print(len(a))   #리스트의 길이 == 리스트가 가지고 있는 원소의 개수
+#81번
+# scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+# # *vaild_score,a,b = scores
+# *vaild_score,_,_ = scores
+# print(vaild_score)
 
-# a =  [4,1,2,[5,8,[9,7],3],6]
-# print(a)            # [4, 1, 2, [5, 8, [9, 7], 3], 6]
-# print(a[3])         # [5, 8, [9, 7], 3]
-# print(a[3][2])      #[9, 7]
-# print(a[3][2][1])   # 7
+#82번
+# scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+# a,b,*vaild_score = scores
+# print(vaild_score)
 
-# a = [4,1,3,2]
-# b = [5,8,6]
-# 리스트의 원소(값)수정
-# a[2] = 5    #리스트 a에서 2번째에 위치한 값을 5로 수정해 주겠다.
+#83번
+# scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+# a, *valid_score, b = scores
+# print(valid_score)
 
-# 리스트의 원소(값) 삭제
-# del a[2]    #리스트 a에서 2번째에 위치한 값을 삭제하겠다.
-# print(a)
+# #84번
+# temp = { }
+# print(type(temp))
 
-# 리스트 끼리의 덧셈
-# print(a+b)  #[4, 1, 3, 2, 5, 8, 6]
+# #85번
+# ice = {'메로나':1000,'폴라포':1200,'빵빠레':1800}
 
-# 리스트와 정수의 곱셈
-# print(b * 3)    #[5, 8, 6, 5, 8, 6, 5, 8, 6]
+# #86번
+# ice['죠스바'] = 1200
+# ice['월드콘'] = 1500
 
-# 리스트 관련 함수
-# a = [4,1,3,2]
+#87번
+# ice = {'메로나': 1000, '폴로포': 1200, '빵빠레': 1800, '죠스바': 1200, '월드콘': 1500}
+# print('메로나 가격:',ice['메로나'])
 
-# 원소 추가
-# a.append(5) #append(값) = 리스트의 마지막 인덱스 번호에 값을 추가한다.
-# 원소 삽입
-# a.insert(2,8) #insert(인덱스번호, 값) = 리스트의 해당 인덱스 위치에 값을 삽입한다.
-# 순서 반전
-# a.reverse() #reverse() = 리스트의 순서를 반전 시킨다.
-# 정렬
-# a.sort() #sort() = 리스트의 순서를 정렬한다.(정렬 기준은 크기, 기본은 오름차순)
-# a.sort(reverse = True) #sort(reverse = True) = 리스트의 순서 정렬(내림차순)
-# 원소 추출
-# print(a.pop(2))  # pop() = 마지막 인덱스 번호에 위치한 값을 추출
-#                  # pop(2) = 2번째 인덱스 번호에 위치한 값을 추출
-# print(a.index()) # index(값) = 리스트 내에 해당 값이 있는지 확인,
-#                   # 있을 경우 인덱스 번호를, 없을 경우 에러 반환
-# 원소 제거
-# a.remove(2)     #remove(값) = 리스트 내에 해당 값을 삭제
-#                 # 없는 값을 삭제할 경우 에러 반환
-# 리스트 확장
-# b = [7,8,9]
-# a.extend(b)   # extend(리스트, 튜플 등 순서가 있는 자료형)
-#                 # => 괄호 안에 적은 자료형의 길이만큼 확장
-# a.append(b)   #append(값/자료형) => 자료형의 길이와는 상관없이 마지막 인덱스에 추가
-# print(a)
+#88번
+# ice['메로나'] = 1300
+
+#89번
+# del ice['메로나']
+# print(ice)
+
+#90번
+# icecream = {'폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+# icecream['누가바']    # 딕셔너리에 없는 값을 사용해서 인덱싱하면 에러가 발생한다.
+
+#집합(Set)
+#집합은 중복을 허용하지 않으며 순서가 없는 자료형이다. 만들 때에는 set()을 사용하여 집합을 만들어 줄 수 있다.
+# s1 = set([1,2,3,4])
+# s2 = set([3,4,5])
+# s3 = set([6,7,8])
+#합집합
+# print(s1 | s2)
+# print(s2 | s3)
+
+#교집합
+# print(s1 & s2)
+# print(s2 & s3)
+
+#차집합
+# print(s1-s2)
+# print(s2-s3)
 
 
-# 51번
-# movie_rank = ['닥터 스트레인지','스플릿','럭키']
-# 52번
-# movie_rank.append('배트맨')
-# 53번
-# movie_rank.insert(1,'슈퍼맨')
-# 54번
-# movie_rank.remove('럭키')
-# 55번
-# movie_rank = ['닥터 스트레인지', '스플릿', '럭키', '배트맨']
-# movie_rank.remove('럭키')
-# movie_rank.remove('배트맨')
-# print(movie_rank)
-# 56번
-# lang1 = ['C','C++','JAVA']
-# lang2 = ["Python","go","C#"]
-# lang1.extend(lang2)
-# print(lang1)
-# 57번
-# nums = [1, 2, 3, 4, 5, 6, 7]
-# print(min(nums)) # min(값1,값2,값3....) = 여러 값들 중 최소값을 반환
-# print(max(nums)) # max(값1,값2,값3....) = 여러 값들 중 최대값을 반환
-# 58번
-# nums = [1,2,3,4,5]
-# total = sum(nums)   #sum(a) == a안에 있는 값들을 모두 더한 값을 반환, 기본값이 0
-# strings = ['a','b','c','d','e']
-# total2 = sum(strings)
-# print(total)
-# print(total2)
-# 59번
-# cook = ["피자", "김밥", "만두", "양념치킨", "족발", "피자", "김치만두", "쫄면", "소시지", "라면", "팥빙수", "김치전"]
-# print(len(cook))
-# 60번
-# nums = [1, 2, 3, 4, 5]
-# 평균 = 총합 / 개수
-# total = sum(nums)   # = 15
-# n = len(nums)       # = 5
-# print(total/n)
+#91번
+inventory = {'메로나':[300,20],'비비빅':[400,3],'죠스바':[250,100]}
+
+#92번
+print(inventory['메로나'][0],'원')
+
+#93번
+print(inventory['메로나'][1],'개')
+
+#94번
+# inventory['월드콘'] = [500,7]
+# print(inventory)
+
+#95번
+# icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+# keys = list(icecream.keys())
+# print(keys)
+
+#96번
+# icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+# values = list(icecream.values())
+# print(values)
+
+#97번
+# icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+# print(sum(icecream.values()))
+
+#98번
+# icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+# new_product = {'팥빙수':2700, '아맛나':1000}
+# icecream.update(new_product)
+# print(icecream)
+
+#99번
+# keys = ("apple", "pear", "peach")
+# vals = (300, 250, 400)
+# result = dict(zip(keys,vals))
+# print(result)
+
+#100번
+# date = ['09/05', '09/06', '09/07', '09/08', '09/09']
+# close_price = [10500, 10300, 10100, 10800, 11000]
+# close_table = dict(zip(date,close_price))
+# print(close_table)
