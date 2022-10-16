@@ -1,0 +1,60 @@
+#별 찍기-1
+# i = int(input())
+# for j in range(i):
+#     print('*'*(j+1))
+#     #j += 1
+#     #print('*'*j)
+
+#별 찍기-2
+# i = int(input())
+# for j in range(i):
+#     j += 1
+#     print(' '*(i-j)+'*'*j)
+
+#X보다 작은 수
+# N,X = input().split()
+# N = int(N)
+# X = int(X)
+# A = input().split()
+# for i in A:
+#     if X > int(i):
+#         print(i)
+
+# 손익분기점
+
+# A,B,C = input().split()
+# A = int(A) # 고정비용
+# B = int(B) # 가변비용
+# C = int(C) # 판매가격
+#
+# if B > C:
+#     print(-1)
+# else:
+#     print(A//(C - B) + 1)
+# cost = A
+# x = 0
+# if B > C:
+#     print(-1)
+# else:
+#     while cost >= C * x:
+#         x += 1
+#         cost = A + B * x
+#     print(x)
+# A만원 = 고정비용, B만원 = 1대당 가변비용, C만원 = 노트북 판매가격
+# 노트북을 100대 생산 == A만원 + 100 * B만원 == 총 비용
+# A = 1000, B = 70, C = 170
+# 노트북 11대의 비용 = 1000 + 70 * 11 = 1700
+# 노트북 11대의 수익 = 170 * 11 = 1870
+# 손익분기점 : 수익 > 비용 인 시점 == 11대를 팔았을때가 손익분기점
+# 손익분기점이 없을 경우 : 가변비용 > 판매가격
+
+#벌집
+N = int(input())
+
+layer = 1
+room = 1
+
+while room < N:
+    layer += 1
+    room += 6 * (layer-1)
+print(layer)
