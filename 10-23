@@ -1,0 +1,82 @@
+# 알람 시계
+# H, M = input().split()
+# H = int(H)
+# M = int(M)
+# if M < 45:
+#     if H != 0:
+#         print(H-1, 15+M)
+#     else:
+#         print(23-H, 15+M)
+# elif M >= 45:
+#     print(H, M-45)
+
+#오븐 시계
+# A, B = input().split()
+# A = int(A)
+# B = int(B)
+# C = int(input())
+# if B + C >= 60:
+#     if A+((B+C)//60) >= 24:
+#         print(((A+(B+C)//60)-24), ((B+C)%60))
+#     elif A+((B+C)//60) < 24:
+#         print((A+(B+C)//60), ((B+C)%60))
+# elif B + C < 60:
+#     print(A, B+C)
+
+
+#주사위 세개
+# a,b,c = input().split()
+# a = int(a)
+# b = int(b)
+# c = int(c)
+# p = 0
+# if a == b and b == c:
+#     p = 10000 + a * 1000
+# elif a == b and a != c:
+#     p = 1000 + a * 100
+# elif a == c and b != c:
+#     p = 1000 + a * 100
+# elif b == c and a != b:
+#     p = 1000 + b * 100
+# else:
+#     if a > b and a > c:
+#         p = a * 100
+#     elif b > a and b > c:
+#         p = b * 100
+#     else:
+#         p = c * 100
+#     #max(a,b,c) * 100
+# print(p)
+
+
+# 문자열 반복
+# n = int(input())    #테스트케이스 개수
+# for _ in range(n):
+#     num, string = input().split()   # '3 ABC' => ['3','ABC']
+#     num = int(num)
+#     # A * 3 + B * 3 + C * 3
+#     output = ''
+#     for s in string:
+#         output += s * num
+#         print(output)
+
+# 단어 공부
+string = input()
+string = string.upper()
+string_s = list(set(string))
+cnts = []
+for s in string_s:
+    cnts.append(string.count(s))
+
+max_num = max(cnts)     # 4
+if cnts.count(max_num) >= 2:
+    print('?')
+else:
+    idx = cnts.index(max_num)
+    print(string_s[idx])
+
+# 가장 많이 입력된 단어를 구한다.
+# 만약 가장 많이 입력된 단어의 수가 2개 이상이라면
+# ?을 출력한다.
+# 그게 아니라 가장 많이 입력된 단어가 한개라면
+# 해당 문자를 대문자로 변환하여 출력한다.
