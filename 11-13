@@ -1,0 +1,46 @@
+# OX퀴즈
+# t = int(input())
+#
+# for i in range(t):
+#     a = list(input())
+#     cnt = 0
+#     result = 0
+#     for j in a:
+#         if j == "O":
+#             cnt += 1
+#             result = result + cnt
+#         else:
+#             cnt = 0
+#     print(result)
+
+# 평균은 넘겠지
+# c = int(input())
+#
+# for _ in range(c):
+#     scores = input().split()
+#     for i in range(len(scores)):
+#         scores[i] = int(scores[i])
+#     average = sum(scores[1:]) / scores[0]
+#     cnt = 0
+#     for j in scores[1:]:
+#         if j > average:
+#             cnt += 1
+#     print("%.3f%%" %(cnt / scores[0] * 100))
+
+# 자료형 : 문자열, 리스트, 튜플, 딕셔너리, 집합, 불, 숫자형(int, float)
+# 참과 거짓의 기준: 자료형 안에 값이 있으면 참, 없으면 거짓
+# _list = [] # 값이 없는 문자열 == 빈 문자열
+# i = 10
+# print(bool(i))
+
+n, k = input("양꼬치 개수와 음료수 개수를 입력하시오:").split()
+n = int(n)
+k = int(k)
+service = n//10
+result = n * 12000 + (k - service) * 2000
+# % formatting
+print("양꼬치: %d인분 / 음료수: 총 %d개 / 서비스: %d개 / 총: %d원" %(n, k, service, result))
+# format 메서드
+print("양꼬치: {}인분 / 음료수: 총 {}개 / 서비스: {}개 / 총: {}원".format(n, k, service, result))
+# f-string
+print(f"양꼬치: {n}인분 / 음료수: 총 {k}개 / 서비스: {service}개 / 총: {result}원")
