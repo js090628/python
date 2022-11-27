@@ -27,3 +27,106 @@
 # a = [1,2,3]
 # a = myappend(a, 30)
 # print(a)
+
+#입력값이 없는 경우
+# def return_A():
+#     return "A"
+#
+# print(return_A())
+
+# a = 'abcd'
+# a = a.upper()
+# print(a)
+
+
+#반환값이 없는 경우
+# def print_string(string:str):   #입력값이 있지만 결과값을 반환하지는 않는다.
+#     print(string)
+#
+# print(print_string(123))
+
+
+#입력, 반환 둘 다 없는 경우
+# def what_time_is_it_now():
+#     import datetime
+#     print(str(datetime.datetime.now())[:16])
+#
+# what_time_is_it_now()
+
+# replace(old, new) = old에 들어간 문자열을 new 문자열로 바꾼 문자열을 리턴한다.
+# a = "Hello"
+# print(a.replace('H','D'))
+#
+# def myreplace(string, old, new):
+#     # replace함수의 기능을 구현해봅시다.
+#     #string에서 old에 해당하는 문자를 new로 변경한 값을 돌려준다.
+#     result = ''
+#     for i in string:
+#         if i == old:
+#             result += new
+#         else:
+#             result += i
+#     return result
+#
+# print(myreplace(a,'H','D'))
+
+# def myupper(string):
+#     alphabet = {'a':'A','b':'B','c':'C','d':'D','e':'E','f':'F','g':'G',
+#                 'h':'H','j':'J','k':'K','l':'L','m':'M','o':'O','p':'P',
+#                 'q':'Q','r':'R','s':'S','t':'T','u':'U','v':'V','w':'W','x':'X','y':'Y','z':'Z'}
+#     result = ''
+#     for i in string:
+#         if i in alphabet:
+#             result += alphabet[i]
+#         else:
+#             result += i
+#     return result
+# a = 'Python'
+# print(myupper(a))
+
+
+#두 수의 곱
+# def solution(num1, num2):
+#     answer = num1 * num2
+#     return answer
+#
+# n1 = 3
+# n2 = 4
+# print(solution(n1, n2))
+
+#두 수의 차
+# def solution(num1, num2):
+#     answer = num1 - num2
+#     return answer
+#
+# n1 = 2
+# n2 = 3
+# print(solution(n1, n2))
+
+# def solution(num1, num2):
+#     answer = 0
+#     if num1 == num2:
+#         answer = 1
+#     else:
+#         answer = -1
+#     return answer
+#
+# n1 = 2
+# n2 = 3
+# print(solution(n1, n2))
+
+#삼각형의 완성조건
+# def solution(sides):
+#     # sides에는 삼각형의 세변의 길이가 들어있다.
+#     # 가장 긴 변의 길이는 나머지 두 변의 길이의 합보다 작아야한다.
+#     # 만약 가장 긴 변의 길이가 나머지 두 변의 길이의 합보다 작으면 1을 아니면 2를 리턴한다.
+#     sides.sort()    #정렬을 해줘서 가장 큰 값이 2번째 인덱스에 위치하게 된다.
+#     if sides[0] + sides[1] >= sides[2]:
+#         return 1
+#     else:
+#         return 2
+# 
+# s = [1,2,3]
+# ss = [199, 72, 222]
+# print(solution(s))  #출력값 : 2
+# print(solution(ss)) #출력값 : 1
