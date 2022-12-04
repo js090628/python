@@ -1,0 +1,128 @@
+# def test(a,*args):
+#     # argument : 인수
+#     print(args)
+#
+# x = 3
+# y = 2
+# z = 5
+# d = 6
+# q = 1
+# e = 6
+#
+# answer = test(x,y,z,d,q,e)
+# print(answer)
+
+
+#평균 구하기
+# def average(n, *scores):
+#     print(f"n = {n}, *scores = {scores}")
+#     total = 0
+#     for s in scores:
+#         total += s
+#     return total / n
+#
+# 과목수 = 5
+# 국어 = 95
+# 수학 = 90
+# 영어 = 80
+# 과학 = 85
+# 사회 = 75
+#
+# 평균 = average(과목수, 국어, 수학, 영어, 과학, 사회)
+# print(평균)
+
+
+# 딕셔너리 = {key:value}
+# def testkwargs(**kwargs):
+#     print(kwargs)
+# ka = "에이"
+# a = 3
+# kb = "비"
+# b = 5
+# result = testkwargs(ka = a, kb = b)
+# print(result)
+
+
+#자기 소개하기
+# def  introduce_myself(name, age, job = "학생"):
+#     print(f"제 이름은 {name}이고, 나이는 {age}살 이며, 직업은 {job}입니다.")
+#
+# name = "송석현"
+# age = 14
+# job = "학생"
+# introduce_myself(name, age)
+
+
+# a = [5,3,25,1]
+# a.sort(reverse = True)
+# print(a)
+
+
+# a = [5,3,25,1]
+# print(a.pop(2)) # 25
+# print(a)        #[5,3,25]
+
+# def mypop(_list, index = -1):
+#     # 매개변수 index에 값이 들어 오지 않을경우 가장 마지막 값을 추출한다.
+#     if index == -1:
+#         return _list[:index], _list[index]
+#     # 그게 아니면 index에 들어온 정수번째 값을 추출한다.
+#     else:
+#         newlist = []
+#         for i in range(len(_list)):
+#             if i != index:
+#                 newlist.append(_list[i])
+#         return newlist, _list[index]
+#
+# a = [9,4,2,1,5,3,6]
+# print(mypop(a))     # ([9,4,2,1,5,3], 6)
+# print(mypop(a,3))   #([9,4,2,5,3,6], 1)
+
+# def test(a,b):
+#     return a+b, a*b, a-b, a/b
+#
+# a = 3
+# b = 4
+# print(test(a,b))
+
+# a = 3
+# def function():
+#     global a
+#     a = 6
+#
+# function()
+# print(a)
+
+# def solution(angle):
+#     if 0< angle <90 :
+#         return 1
+#     elif angle == 90:
+#         return 2
+#     elif 90< angle <180:
+#         return 3
+#     else:
+#         return 4
+#
+# a = 180
+# print(solution(a))
+    # angle의 각이 0< angle <90 = 예각 => 1
+    # angle의 각이  angle == 90 = 직각 => 2
+    # angle의 각이 90< angle <180 = 둔각 => 3
+    # angle의 각이 angle == 180 = 평각 => 4
+
+
+# def solution(before, after):
+#     # before에 있는 문자들의 순서를 바꾸어서 after를 만들 수 있다면 1을, 없으면 0을 리턴하라
+#     # 순서를 바구어서 만들 수 있는 경우 = before와 after의 알파벳이 서로 같을 경우
+#     for i in before:
+#         if before.count(i) != after.count(i):
+#             return 0
+#     return 1
+#
+# b1, a1 = "olleh", "hello"
+# b2, a2 = "allpe", "apple"
+# print(solution(b1, a1))     # 1
+# print(solution(b2, a2))     # 0
+
+
+120843
