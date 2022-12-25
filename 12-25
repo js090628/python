@@ -1,0 +1,20 @@
+def solution(polynomial):
+    answer = ""
+    in_x = []
+    not_x = []
+    polynomial = polynomial.split()
+    for i in polynomial:
+        if 'x' in i:
+            in_x.append(i)
+        elif i.isdigit():
+            not_x.append(i)
+    for i in in_x:
+        if len(i) > 1:
+            print(i[:-1])
+        else:
+            print(1)
+    print(in_x)
+    print(not_x)
+    return answer
+p = "3x + 7 + x"
+print(solution(p))
