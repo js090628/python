@@ -1,0 +1,35 @@
+# 10 => 2진수 화 => 1010
+# 0               1
+# 1               2
+# 10              3
+# 11              4
+# 101             5
+# 110             6
+# 111             7
+# 1000            8
+# 1001            9
+# 1010            10
+
+def binary(n,arr):
+    new_arr = []
+    for i in arr:
+        "b에다가 i를 2진수로 바꾼 값을 넣어준다."
+        b = ""
+        while i:
+            b += str(i%2)
+            i //=2
+        b = b[::-1]
+        #b의 길이가 n보다 작으면 앞에다 0을 더해준다.
+        while len(b) < n:
+            b = "0" + b
+        new_arr.append(b)
+    return new_arr
+def solution(n,arr1,arr2):
+    arr1 = binary(n,arr1)
+    arr2 = binary(n,arr2)
+    answer = []
+
+n = 5
+arr1 = [9, 20, 28, 18, 11] # ['01001','10100','11100','10010','01011']
+arr2 = [30, 1, 21, 17, 28] # ['11110','00001','10101','10001','11100']
+print(solution(n,arr1,arr2))
