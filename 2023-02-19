@@ -35,3 +35,22 @@ def my_replace(string, old, new, n=0):
     return s
 print(my_replace(a,'a','b'))     # 'bbbbbb'
 print(my_replace(a,'a','b',1))   # 'bbbaaa'
+
+
+#find 함수
+def my_find(string, find, start = 0, end = 0):
+    s = -1
+    if start == 0:
+        start = len(string)
+    for i in string:
+        s += 1
+        if i == find:
+            if start == 0:
+                if s <= end:
+                    return s
+                else:
+                    continue
+        if start > 0:
+            start -= 1
+    return -1
+print(my_find(a,'c',3,5))
