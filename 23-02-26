@@ -1,0 +1,42 @@
+# def myFind(string,substr,start = 0, end = -1):
+#     length = len(substr)
+#     if end == -1:
+#         end = len(string)
+#     for i in range(start, end-length+1):
+#         if string[i:i+length] == substr:
+#             return i
+#     return -1
+# print(myFind(string, 'World', 3))
+# print(string.find('l'))  #처음 부터 긑까지 l이 string에 몇 번째에 있는지를 반환
+# print(string.find('l',4)) #인덱스 번호로 4번째 부터 끝까지 l이 string에 몇 번째에서 있는지를 반환
+# print(string.find('l',4,9)) #인덱스 번호 4부터 9전까지 l이 string에 몇 번째에 있는지를 반환
+# print(string.find('ld')) #ld를 처음부터 끝가지 string의 몇 번째에 있는지를 반환
+
+
+# def myint(x:str, base=10):
+#     x = x[::-1]
+#     hexa = {'A': 10, 'B': 11, 'C': 12, 'D': 13, 'E': 14, 'F': 15}
+#     result = 0  # 결과값
+#     for i in range(len(x)):
+#         if x[i].isalpha():
+#             result += hexa[x[i]] * base ** i
+#         else:
+#             result += int(x[i]) * base ** i
+#     return result
+#
+# s = '1010'
+# print(myint(s, 2))
+# print(myint(s, 8))
+# print(myint(s, 10))
+# print(myint(s, 16))
+
+# 아파트 만들기
+# 아파트가 몇층 몇호까지 있습니까?
+apartment = []
+floor = input('층의 수:')
+ho = input('호의 수:')
+
+
+# apartment = [['101호','102호','103호','104호'],
+#              ['201호','202호','203호','204호'],
+#              ['301호','302호','303호','304호']]
