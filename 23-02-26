@@ -35,6 +35,10 @@
 apartment = []
 floor = input('층의 수:')
 ho = input('호의 수:')
+cnt = 0
+# apartment에 floor로 층을 정한 뒤, cnt로 1만큼 더하면서 호의 수를 늘린다.
+# 만약 ho의 수만큼 늘어났다면 floor의 값을 1 더한 뒤, 다시 호의 수를 늘린다.
+# 위의 과정을 apartment에 넣은 뒤, apartment를 출력한다.
 
 
 # apartment = [['101호','102호','103호','104호'],
