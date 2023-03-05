@@ -1,0 +1,27 @@
+# # 아파트 만들기
+# # 아파트가 몇층 몇호까지 있습니까?
+# apartment = []
+# floor = int(input('층의 수:'))
+# ho = int(input('호의 수:'))
+# for i in range(1,floor+1):
+#     temp = []
+#     for j in range(1,ho+1):
+#         temp.append(str(i)+'0'+str(j)+'호')
+#     apartment.append(temp)
+# print(apartment)
+# # [['101호','102호','103호','104호'],
+# #  ['201호','202호','203호','204호'],
+# #  ['301호','302호','303호','304호']]
+#
+# info = [[0,4,4,5],
+#         [0,0,0,2],
+#         [3,4,5,2]]
+# def make_apart_info(apartment,info):
+#     result = []
+#     for x in range(len(apartment)):
+#         dictionary = {}
+#         for y in range(len(apartment[x])):
+#             dictionary[apartment[x][y]] = str(info[x][y]) + '명'
+#             result.append(dictionary)
+#     return result
+# print(make_apart_info(apartment,info))
