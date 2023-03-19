@@ -16,7 +16,7 @@ def solution(keymap, targets):
     answer = []
     count = 0
     # keymap[0] 또는 keymap[1]중 targets에 포함되있는 것을 찾고,
-    # 둘 다 포함되있다면 count를 1씩 늘리면서 가까운 것을 찾는다..
+    # 포함되어 있는 keymap count를 1씩 늘리면서 가까운 것을 찾는다.
     # 만약 targets에 원하는 것이 keymap에 포함되어있지 않다면
     # -1을 리턴한다.
     return answer
